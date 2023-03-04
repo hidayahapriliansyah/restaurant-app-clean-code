@@ -1,4 +1,6 @@
+import UrlParser from '../routes/url-parser';
 import DrawerInitiator from '../utils/drawer-initiator';
+import routes from '../routes/routes';
 
 class App {
   constructor({ hamburger, drawer, content }) {
@@ -17,6 +19,14 @@ class App {
     });
 
     // inisialisasi komponen constructor
+  }
+
+  async renderPage() {
+    const url = UrlParser.parseActiveUrlWithCombiner();
+    const page = routes[url];
+    console.log('test routes', await routes['/favorite-restaurant'].render());
+    this._content.innerHTML = await page.render();
+    await page.afterRender();
   }
 }
 
