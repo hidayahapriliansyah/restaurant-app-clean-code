@@ -1,0 +1,331 @@
+
+.content {
+  margin-top: 80px;
+}
+
+.hero {
+  position: relative;
+}
+
+.img-hero {
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-tagline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: start;
+}
+
+.tagline {
+  width: 80%;
+  max-width: 500px;
+  padding: 15px;
+  background-color: #d20019de;
+  color: var(--text-primary);
+  backdrop-filter: blur(10px);
+  border-top-right-radius: 20px;
+  color: white;
+}
+
+.tagline h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.tagline p {
+  font-size: 12px;
+}
+
+.explore {
+  margin: 30px 0;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.explore h2 {
+  font-size: 18px;
+  margin: 30px 0;
+}
+
+.card-group {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: fit-content;
+  gap: 40px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.card {
+  position: relative;
+  max-width: 350px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+}
+
+.explore .restaurant-name a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.card:hover img {
+  transform: scale(110%);
+}
+
+.detail {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 35%;
+  padding: 15px;
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.card .city {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  height: 40px;
+  min-width: 100px;
+  width: fit-content;
+  background-color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.city h4 {
+  margin-left: 10px;
+}
+
+.detail .rating {
+  color: var(--red-primary);
+  font-size: 12px;
+}
+
+.detail .restaurant-name {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.detail .description {
+  line-height: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detail .full-info {
+  color: var(--red-primary);
+}
+
+.card:hover .detail {
+  height: fit-content;
+}
+
+.card:hover .detail .description {
+  white-space: normal;
+}
+
+.explore .card a {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  min-width: 45px;
+  min-height: 45px;
+}
+
+.explore .card .description a {
+  display: inline-flex;
+  padding: 5px;
+}
+
+.explore .card h3 a {
+  font-size: 16px;
+  margin-bottom: -10px;
+}
+
+.hits {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.hits h2 {
+  font-size: 18px;
+  margin-top: 70px;
+}
+
+.hits .card-group {
+  width: 100%;
+  justify-items: center;
+  gap: 10px;
+}
+
+.hits .detail h3 {
+  font-size: 14px;
+  max-width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-hits {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.card-hits img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.card-hits a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  background-color: white;
+  color: var(--text-primary);
+}
+
+.card-hits .detail {
+  position: static;
+  background-color: inherit;
+  border-radius: 0;
+}
+
+.card-hits:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transform: translateY(-2%);
+}
+
+@media screen and (min-width: 425px) {
+  .tagline {
+    padding: 25px;
+  }
+
+  .tagline h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .tagline p {
+    font-size: 14px;
+  }
+
+  .explore h2 {
+    font-size: 24px;
+  }
+
+  .detail {
+    padding: 20px;
+  }
+
+  .card .city {
+    font-size: 16px;
+  }
+
+  .detail .rating {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+
+  .detail .description {
+    line-height: 22px;
+  }
+
+  .explore .card h3 a {
+    font-size: 24px;
+  }
+
+  .hits h2 {
+    font-size: 24px;
+  }
+
+  .hits .detail h3 {
+      font-size: 18px;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .img-hero {
+    max-height: 500px;
+  }
+
+  .tagline p {
+    font-size: 16px;
+  }
+
+  .card-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-tagline {
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  .tagline {
+    width: 80%;
+    padding: 25px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+  }
+
+  .tagline p {
+    max-width: 300px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card-group {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .hero, .explore, .hits {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .img-hero {
+    min-width: 1000px;
+  }
+}
