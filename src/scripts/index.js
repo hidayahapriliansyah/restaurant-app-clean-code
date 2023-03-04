@@ -1,7 +1,13 @@
-import 'regenerator-runtime'; /* for async await transpile */
+import App from './views/app';
+
 import '../styles/content.css';
 import '../styles/main.css';
 import '../styles/navbar.css';
 
-import './event';
-import './render/render';
+const app = new App({
+  hamburger: document.querySelector('.burger'),
+  drawer: document.querySelector('.menu'),
+  content: document.querySelector('.content'),
+});
+
+console.log('Hello World Adididididi');
