@@ -3,6 +3,7 @@ import App from './views/app';
 import '../styles/content.css';
 import '../styles/main.css';
 import '../styles/navbar.css';
+import '../styles/detail.css';
 
 const app = new App({
   hamburger: document.querySelector('.burger'),

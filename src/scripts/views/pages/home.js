@@ -1,7 +1,8 @@
 import data from '../../../DATA.json';
 import { createRestaurantCards, createHitsFood } from '../templates/template-creator';
+import RestaurantData from '../../data/restaurant-data';
 
-const { restaurants, hitFoods } = data;
+const { hitFoods } = data;
 
 const Home = {
   async render() {
@@ -31,6 +32,7 @@ const Home = {
   },
 
   async afterRender() {
+    const restaurants = await RestaurantData.listAll();
     const restaurantCardGroupContainer = document.querySelector('.explore .card-group');
     restaurants.forEach((restaurant) => {
       restaurantCardGroupContainer.innerHTML += createRestaurantCards(restaurant);

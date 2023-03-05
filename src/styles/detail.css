@@ -1,0 +1,259 @@
+.img-rating {
+  position: relative;
+}
+
+.img-detail {
+  display: flex;
+  justify-content: center;
+
+  width: 85%;
+  aspect-ratio: 1 / 1;
+  margin: auto;
+  overflow: hidden;
+
+  border-radius: 25px;
+  
+}
+
+.img-detail img {
+  height: 100%;
+  z-index: -10;
+}
+
+.detail__rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  padding: 6px 12px;
+  margin-top: -15px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  width: max-content;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow:  0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+  z-index: 10;
+}
+
+.detail__rating svg {
+  width: 22px;
+  height: 22px;
+}
+
+.detail__info {
+  margin-top: 12px;
+  padding: 0 25px;
+}
+
+.detail__info h2 {
+  margin-bottom: 10px;
+}
+
+.detail__info-category {
+  display: block;
+  margin-bottom: 10px;
+  
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.detail__info-category a {
+  padding: 2px 3px;
+  margin: 2px;
+
+  background-color: brown;
+  font-weight: normal;
+  color: white;
+  text-decoration: none;
+  
+  border-radius: 3px;
+}
+
+.detail__info-alamat, .detail__info-kota {
+  display: block;
+  margin-bottom: 10px;
+  
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.detail__info-alamat span, .detail__info-kota span {
+  font-weight: normal;
+}
+
+.detail__info-deskripsi {
+  text-align: justify;
+  line-height: 18px;
+}
+
+.detail__info-deskripsi span {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.detail__info-deskripsi p {
+  color: rgb(39, 39, 39);
+}
+
+.detail__menu {
+  margin-top: 12px;
+  padding: 0 25px;
+  font-size: 14px;
+}
+
+.detail__menu-makanan, .detail__menu-minuman {
+  margin-top: 5px;
+}
+
+.detail__menu-makanan h4, .detail__menu-minuman h4 {
+  margin-bottom: 5px;
+}
+
+.detail__menu-makanan ul, .detail__menu-minuman ul {
+  margin-left: 35px;
+}
+
+.detail__reviews-group {
+  margin-top: 25px;
+  padding: 0 25px;
+}
+
+.detail__review {
+  margin: 10px auto;
+  padding: 15px;
+
+  background-color: white;
+  color: rgb(78, 78, 78);
+
+  font-size: 14px;
+
+  border-radius: 10px;
+  box-shadow:  0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.detail__review-review {
+  display: block;
+  margin: 3px 0;
+  color: black;
+}
+
+.detail__review-name {
+  font-size: 12px;
+  text-align: left;
+}
+
+.detail__review-date {
+  font-size: 12px;
+  text-align: right;
+}
+
+.detail__review-more {
+  display: flex;
+  justify-content: center;
+}
+
+.detail__review-more a {
+  display: inline-block;
+  margin: 10px auto;
+  padding: 6px 24px;
+
+  background-color: var(--red-primary);
+
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+
+  border-radius: 20px;
+}
+
+.detail__review-more a:hover {
+  background-color: rgb(255, 79, 79);
+  box-shadow:  0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+@media screen and (min-width: 425px) {
+}
+
+@media screen and (min-width: 760px) {
+  /* .detail {
+    max-width: 1024px;
+    height: fit-content;
+  } */
+
+  .img-detail__info {
+    display: flex;
+    margin-left: 15px;
+  }
+
+  .img-rating {
+    max-width: 250px;
+  }
+
+  .detail__info {
+    margin-top: 0;
+    margin-left: 10px;
+    padding-left: 0;
+  }
+
+  .detail__info-category, .detail__info-alamat, .detail__info-kota, .detail__info-deskripsi  {
+    font-size: 16px;
+  }
+  
+  .detail__info-deskripsi span {
+    font-size: 16px;
+  }
+
+  .detail__info-deskripsi p {
+    line-height: 22px;
+  }
+
+  .detail__menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+
+    margin-top: 25px;
+    margin-left: 260px;
+    padding-left: 0;
+    font-size: 16px;
+  }
+
+  .detail__menu h3 {
+    width: 100%;
+  }
+
+  .detail__menu-makanan, .detail__menu-minuman {
+    width: max-content;
+    margin-right: 30px;
+  }
+
+  .detail__reviews-group {
+    margin-left: 260px;
+    padding-left: 0;
+  }
+
+  .detail__review-more {
+    display: block;
+  }
+
+  .detail__review-more a {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+}
+
+
+@media screen and (min-width: 1440px) {
+
+}
