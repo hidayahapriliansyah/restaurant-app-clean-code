@@ -1,0 +1,19 @@
+.reviews__container {
+  max-width: 950px;
+  margin: auto;
+  padding: 10px;
+}
+
+.reviews__container-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.reviews__container-card .detail__review {
+  width: 100%;
+  max-width: 300px;
+  margin-left: 0;
+  margin-right: 0;
+}

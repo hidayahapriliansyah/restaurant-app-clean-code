@@ -3,36 +3,41 @@ import urlParser from '../../routes/url-parser';
 import {
   createDetailImgRating,
   createDetailInfo,
+  createListMenuMakanan,
+  createListMenuMinuman,
+  createReviewContentCard,
 } from '../templates/template-creator';
 
 const Detail = {
   async render() {
     return `
-    <div class="img-detail__info">
-      <div class="img-rating">
+    <div class="detail__container">
+      <div class="img-detail__info">
+        <div class="img-rating">
 
-      </div>
-      <div class="detail__info">
+        </div>
+        <div class="detail__info">
 
+        </div>
       </div>
-    </div>
-    <div class="detail__menu">
-      <h3>Menu</h3>
-      <div class="detail__menu-makanan">
+      <div class="detail__menu">
+        <h3>Menu</h3>
+        <div class="detail__menu-makanan">
 
-      </div>
-      <div class="detail__menu-minuman">
+        </div>
+        <div class="detail__menu-minuman">
 
+        </div>
       </div>
-    </div>
-  
-    <div class="detail__reviews-group">
-      <h3>Customer Review</h3>
-      <div class="detail__reviews-group__content">
+    
+      <div class="detail__reviews-group">
+        <h3>Customer Review</h3>
+        <div class="detail__reviews-group__content">
 
-      </div>
-      <div class="detail__review-more">
-        <a href="#">Lihat selengkapnya</a>
+        </div>
+        <div class="detail__review-more">
+          <a href="#">Lihat selengkapnya</a>
+        </div>
       </div>
     </div>
     `;
@@ -48,6 +53,20 @@ const Detail = {
 
     const detailInfo = document.querySelector('.detail__info');
     detailInfo.innerHTML = createDetailInfo(restaurant);
+
+    const { foods, drinks } = restaurant.menus;
+    const menuMakanan = document.querySelector('.detail__menu-makanan');
+    menuMakanan.innerHTML = createListMenuMakanan(foods);
+
+    const menuMinuman = document.querySelector('.detail__menu-minuman');
+    menuMinuman.innerHTML = createListMenuMinuman(drinks);
+
+    const { customerReviews: reviews } = restaurant;
+    const reviewsContainer = document.querySelector('.detail__reviews-group__content');
+    reviewsContainer.innerHTML = createReviewContentCard(reviews);
+
+    const moreReview = document.querySelector('.detail__review-more a');
+    moreReview.setAttribute('href', `#/reviews/${restaurant.id}`);
   },
 };
 

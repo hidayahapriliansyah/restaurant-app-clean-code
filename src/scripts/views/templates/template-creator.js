@@ -57,27 +57,32 @@ const createDetailInfo = (restaurant) => `
   </span>
 `;
 
-const createListMenuMakanan = (restaurant) => `
+const createListMenuMakanan = (foods) => `
   <h4>Makanan</h4>
   <ul>
-    ${restaurant.menus.foods.map((food) => `
-      <li>${food}</li>
+    ${foods.map((food) => `
+      <li>${food.name}</li>
     `).join('')}
   </ul>
 `;
 
-const createListMenuMinuman = (restaurant) => `
+const createListMenuMinuman = (drinks) => `
   <h4>Minuma</h4>
   <ul>
-    ${restaurant.menus.drinks.map((drink) => `
-      <li>${drink}</li>
+    ${drinks.map((drink) => `
+      <li>${drink.name}</li>
     `).join('')}
   </ul>
 `;
 
-const createReviewContentCard = (restaurant) => {
-  const reviews = restaurant.customerReviews;
-  reviews.map((review) => `
+const createReviewContentCard = (reviews, all) => {
+  let allReviews = reviews;
+  if (all !== 'all') {
+    console.log(true);
+    allReviews = reviews.slice(0, 3);
+  }
+
+  return allReviews.map((review) => `
     <div class="detail__review">
       <p class="detail__review-name">${review.name}</p>
       <span class="detail__review-review">${review.review}</span>

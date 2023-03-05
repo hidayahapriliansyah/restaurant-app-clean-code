@@ -1,5 +1,6 @@
 import UrlParser from '../routes/url-parser';
 import DrawerInitiator from '../utils/drawer-initiator';
+// eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
 import routes from '../routes/routes';
 
 class App {
