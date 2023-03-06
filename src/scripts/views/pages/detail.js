@@ -31,12 +31,12 @@ const Detail = {
       </div>
     
       <div class="detail__reviews-group">
-        <h3>Customer Review</h3>
+        <h3><span></span> Customer Review</h3>
         <div class="detail__reviews-group__content">
 
         </div>
         <div class="detail__review-more">
-          <a href="#">Lihat selengkapnya</a>
+
         </div>
       </div>
     </div>
@@ -62,11 +62,16 @@ const Detail = {
     menuMinuman.innerHTML = createListMenuMinuman(drinks);
 
     const { customerReviews: reviews } = restaurant;
+    const customerReviewsCount = document.querySelector('.detail__reviews-group h3 span');
+    customerReviewsCount.innerHTML = reviews.length;
+
     const reviewsContainer = document.querySelector('.detail__reviews-group__content');
     reviewsContainer.innerHTML = createReviewContentCard(reviews);
 
-    const moreReview = document.querySelector('.detail__review-more a');
-    moreReview.setAttribute('href', `#/reviews/${restaurant.id}`);
+    if (reviews.length > 3) {
+      const moreReviewContainer = document.querySelector('.detail__review-more');
+      moreReviewContainer.innerHTML = `<a href="#/reviews/${restaurant.id}">Lihat ${reviews.length - 3} review lainnya</a>`;
+    }
   },
 };
 

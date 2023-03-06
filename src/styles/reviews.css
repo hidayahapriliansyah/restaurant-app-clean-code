@@ -1,7 +1,13 @@
 .reviews__container {
   max-width: 950px;
+  min-height: 100vh;
   margin: auto;
   padding: 10px;
+}
+
+.reviews__container h2 {
+  margin: 10px auto;
+  text-align: center;
 }
 
 .reviews__container-card {
@@ -11,9 +17,13 @@
   gap: 10px;
 }
 
+.reviews__container .img-rating {
+  margin: 0 auto 15px;
+  width: 180px;
+}
+
 .reviews__container-card .detail__review {
   width: 100%;
   max-width: 300px;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
 }
