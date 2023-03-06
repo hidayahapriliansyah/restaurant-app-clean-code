@@ -20,5 +20,3 @@ window.addEventListener('hashchange', () => {
 window.addEventListener('load', () => {
   app.renderPage();
 });
-
-console.log('Hello World Adididididi');
