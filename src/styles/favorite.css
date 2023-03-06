@@ -1,0 +1,14 @@
+.favorite__restaurant {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.favorite__restaurant h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.favorite__restaurant .restaurant-name a {
+  text-decoration: none;
+  color: black;
+}

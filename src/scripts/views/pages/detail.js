@@ -86,6 +86,7 @@ const Detail = {
         pictureId: restaurant.pictureId,
         city: restaurant.city,
         rating: restaurant.rating,
+        description: restaurant.description,
       },
     });
   },

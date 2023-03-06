@@ -184,8 +184,8 @@
 
 #favorite-button-container {
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 20px;
+  right: 20px;
 }
 
 #favorite-button {
@@ -272,6 +272,11 @@
     margin-left: 0;
     margin-right: 0;
     text-align: left;
+  }
+
+  #favorite-button-container {
+    bottom: 50px;
+    right: 50px;
   }
 }
 

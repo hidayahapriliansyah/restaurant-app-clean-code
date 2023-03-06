@@ -5,6 +5,7 @@ import '../styles/main.css';
 import '../styles/navbar.css';
 import '../styles/detail.css';
 import '../styles/reviews.css';
+import '../styles/favorite.css';
 
 const app = new App({
   hamburger: document.querySelector('.burger'),
