@@ -4,6 +4,7 @@ const CONFIG = {
   IDB_NAME: 'botram-restaurant',
   IDB_VERSION: 1,
   OBJECT_STRORE_NAME: 'favorite-restaurant',
+  CACHE_NAME: `BotramFindRestaurant-${new Date().toDateString()}`,
 };
 
 export default CONFIG;

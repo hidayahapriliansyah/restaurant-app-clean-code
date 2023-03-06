@@ -78,7 +78,6 @@ const createListMenuMinuman = (drinks) => `
 const createReviewContentCard = (reviews, all) => {
   let allReviews = reviews;
   if (all !== 'all') {
-    console.log(true);
     allReviews = reviews.slice(0, 3);
   }
 

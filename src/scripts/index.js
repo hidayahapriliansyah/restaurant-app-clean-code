@@ -1,4 +1,5 @@
 import App from './views/app';
+import swRegister from './utils/sw-register';
 
 import '../styles/content.css';
 import '../styles/main.css';
@@ -19,4 +20,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
 });
