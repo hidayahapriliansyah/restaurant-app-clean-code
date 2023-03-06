@@ -1,5 +1,6 @@
 import RestaurantData from '../../data/restaurant-data';
 import urlParser from '../../routes/url-parser';
+import FavoriteButtonInitiator from '../../utils/favorite-button-initiator';
 import {
   createDetailImgRating,
   createDetailInfo,
@@ -40,6 +41,10 @@ const Detail = {
         </div>
       </div>
     </div>
+
+    <div id="favorite-button-container">
+
+    </div>
     `;
   },
 
@@ -72,6 +77,17 @@ const Detail = {
       const moreReviewContainer = document.querySelector('.detail__review-more');
       moreReviewContainer.innerHTML = `<a href="#/reviews/${restaurant.id}">Lihat ${reviews.length - 3} review lainnya</a>`;
     }
+
+    FavoriteButtonInitiator.init({
+      favoriteButtonContainer: document.querySelector('#favorite-button-container'),
+      restaurant: {
+        id: restaurant.id,
+        name: restaurant.name,
+        pictureId: restaurant.pictureId,
+        city: restaurant.city,
+        rating: restaurant.rating,
+      },
+    });
   },
 };
 

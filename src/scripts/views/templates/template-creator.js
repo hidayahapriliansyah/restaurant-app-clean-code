@@ -91,6 +91,18 @@ const createReviewContentCard = (reviews, all) => {
   `).join('');
 };
 
+const createFavoriteButtonTemplate = () => `
+  <button aria-label="like this movie" id="favorite-button" class="like">
+    <i class="fa fa-heart-o" aria-hidden="true"></i>
+  </button>
+`;
+
+const createFavoritedButtonTemplate = () => `
+  <button aria-label="unlike this movie" id="favorite-button" class="like">
+    <i class="fa fa-heart" aria-hidden="true"></i>
+  </button>
+`;
+
 export {
   createRestaurantCards,
   createHitsFood,
@@ -99,4 +111,6 @@ export {
   createListMenuMakanan,
   createListMenuMinuman,
   createReviewContentCard,
+  createFavoriteButtonTemplate,
+  createFavoritedButtonTemplate,
 };
