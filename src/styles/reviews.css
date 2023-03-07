@@ -90,8 +90,7 @@
 }
 
 .reviews__add #review-submit:hover {
-  color: var(--red-primary);
-  background-color: #ffffff;
+  background-color: #ff7686;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.267);
 }
 
