@@ -1,54 +1,42 @@
-.reviews__container {
-  max-width: 950px;
-  min-height: 100vh;
-  margin: auto;
-  padding: 10px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap');
 
-.reviews__container h2 {
-  margin: 10px auto;
-  text-align: center;
-}
-
-.reviews__container-card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
-.reviews__container .img-rating {
-  margin: 0 auto 15px;
-  width: 180px;
-}
-
-.reviews__container-card .detail__review {width: 100%;
+* {
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
+:root {
+  --red-primary: #D2001A;
+  --white-primary: #fafafa;  
+  --text-primary: #181D31;
+  --text-secondary: #393E46;
+  --font-normal: 16px;
+  --font-medium: 18px;
+}
 
 .reviews__add {
   display: flex;
-  margin-bottom: 15px;
 }
 
 .reviews__add form {
-  width: 100%;
+  min-width: 300px;
   margin: auto;
 }
 
 .reviews__add form span p {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  margin: 20px 0;
 }
 
 .reviews__add #review-name {
-  width: 100%;
+  min-width: 100%;
+  max-width: 300px;
   margin: 5px 0;
   padding: 10px;
   
-  font-size: 14px;
-
   border-radius: 5px;
   border: 1px solid var(--red-primary);
   outline: none;
@@ -59,13 +47,12 @@
 }
 
 .reviews__add #review-body {
-  width: 100%;
+  min-width: 100%;
+  max-width: 300px;
   height: 100px;
   margin: 5px 0;
   padding: 10px;
-
-  font-size: 14px;
-
+  
   border-radius: 5px;
   border: 1px solid var(--red-primary);
   outline: none;
@@ -76,11 +63,8 @@
 }
 
 .reviews__add #review-submit {
-  min-width: 55px;;
-  min-height: 44px;
   padding: 5px;
   border-radius: 5px;
-  font-size: 14px;
   border: 1px solid var(--red-primary);
   outline: none;
   font-weight: bold;
@@ -93,10 +77,4 @@
   color: var(--red-primary);
   background-color: #ffffff;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.267);
-}
-
-@media screen and (min-width: 760px) {
-  .reviews__add #review-name, .reviews__add #review-body, .reviews__add #review-submit {
-    font-size: 16px;
-  }
 }

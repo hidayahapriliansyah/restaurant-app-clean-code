@@ -5,6 +5,9 @@ import { createReviewContentCard, createDetailImgRating } from '../templates/tem
 const Reviews = {
   async render() {
     return `
+      <div class="loader-container">
+        <span class="loader"></span>
+      </div>
       <div class="reviews__container">
         <h2>Review Restaurant <span></span></h2>
         <div class="img-rating">
@@ -29,8 +32,10 @@ const Reviews = {
     imgRating.innerHTML = createDetailImgRating(restaurant);
 
     const reviewsContainerCard = document.querySelector('.reviews__container-card');
-    reviewsContainerCard.innerHTML = createReviewContentCard(reviews, 'all');
-    console.log(reviews);
+    reviewsContainerCard.innerHTML = createReviewContentCard(reviews.reverse(), 'all');
+
+    const loaderContainer = document.querySelector('.loader-container');
+    loaderContainer.remove();
   },
 };
 

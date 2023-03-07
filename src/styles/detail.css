@@ -66,16 +66,9 @@
   font-weight: 600;
 }
 
-.detail__info-category a {
-  padding: 2px 3px;
-  margin: 2px;
 
-  background-color: brown;
+.detail__info-category span {
   font-weight: normal;
-  color: white;
-  text-decoration: none;
-  
-  border-radius: 3px;
 }
 
 .detail__info-alamat, .detail__info-kota {
@@ -161,10 +154,15 @@
 .detail__review-more {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .detail__review-more a {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 44px;
   margin: 10px auto;
   padding: 6px 24px;
 
@@ -259,18 +257,19 @@
     margin-right: 30px;
   }
 
+  .detail__menu-makanan ul li, .detail__menu-minuman ul li {
+    font-size: 16px;
+  }
+
   .detail__reviews-group {
     margin-left: 260px;
     padding-left: 0;
   }
 
-  .detail__review-more {
-    display: block;
-  }
-
   .detail__review-more a {
     margin-left: 0;
     margin-right: 0;
+    font-size: 16px;
     text-align: left;
   }
 

@@ -23,7 +23,6 @@ const FavoriteRestaurantIdb = {
   },
 
   async deleteRestaurant(id) {
-    console.log('deleteRestaurant', id);
     return (await dbPromise).delete(OBJECT_STRORE_NAME, id);
   },
 };

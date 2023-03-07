@@ -44,9 +44,9 @@ const createDetailInfo = (restaurant) => `
   <h2>${restaurant.name}</h2>
   <span class="detail__info-category">Category :
     <span>
-    ${restaurant.categories.map((category) => `
-      <a href="#">${category.name}</a>
-    `).join('')}
+    ${restaurant.categories.map((category, index, arr) => `
+        <span>${category.name}${index < arr.length - 1 ? ',' : ''} </span>
+      `).join('')}
     </span>
   </span>
   <span class="detail__info-alamat">Alamat : <span>${restaurant.address}</span></span>
@@ -67,7 +67,7 @@ const createListMenuMakanan = (foods) => `
 `;
 
 const createListMenuMinuman = (drinks) => `
-  <h4>Minuma</h4>
+  <h4>Minuman</h4>
   <ul>
     ${drinks.map((drink) => `
       <li>${drink.name}</li>
