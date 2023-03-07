@@ -18,9 +18,14 @@ const FavoriteRestaurant = {
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurant();
     const favoriteCardGroup = document.querySelector('.card-group');
 
-    restaurants.forEach((restaurant) => {
-      favoriteCardGroup.innerHTML += createRestaurantCards(restaurant);
-    });
+    if (restaurants.length === 0) {
+      favoriteCardGroup.style.display = 'block';
+      favoriteCardGroup.innerHTML += '<p class="no-favorite">Tidak ada restoran favorit</p>';
+    } else {
+      restaurants.forEach((restaurant) => {
+        favoriteCardGroup.innerHTML += createRestaurantCards(restaurant);
+      });
+    }
 
     const loaderContent = document.querySelector('loader-content');
     loaderContent.remove();

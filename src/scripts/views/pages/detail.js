@@ -85,7 +85,7 @@ const Detail = {
         const moreReviewContainer = document.querySelector('.detail__review-more');
         moreReviewContainer.innerHTML = `<a href="#/reviews/${
           restaurant.id
-        }">Lihat ${reviews.length - 3} review lainnya</a>`;
+        }" aria-label="Lihat ${reviews.length - 3} review lainnya">Lihat ${reviews.length - 3} review lainnya</a>`;
       }
 
       FavoriteButtonInitiator.init({

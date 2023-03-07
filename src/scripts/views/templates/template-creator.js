@@ -91,7 +91,7 @@ const createReviewContentCard = (reviews, all) => {
 };
 
 const createFavoriteButtonTemplate = () => `
-  <button aria-label="like this movie" id="favorite-button" class="like">
+  <button aria-label="Tambahkan ke favorit restaurant" id="favorite-button" class="like">
     <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;

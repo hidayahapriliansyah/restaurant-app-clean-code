@@ -4,7 +4,7 @@ class LoaderContent extends HTMLElement {
   }
 
   render() {
-    this._innerHTML = `
+    this.innerHTML = `
       <span class="loader"></span>
     `;
   }

@@ -95,6 +95,10 @@
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.267);
 }
 
+.reviews__add #review-submit:focus {
+  outline: 1px solid var(--red-primary);
+}
+
 @media screen and (min-width: 760px) {
   .reviews__add #review-name, .reviews__add #review-body, .reviews__add #review-submit {
     font-size: 16px;

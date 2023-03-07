@@ -3,6 +3,14 @@
   padding: 20px;
 }
 
+.favorite__restaurant .no-favorite {
+  display: block;
+  width: 100%;
+  margin: 25px auto;
+  font-weight: bold;
+  font-size: 14px;
+}
+
 .favorite__restaurant h2 {
   margin-bottom: 15px;
   text-align: center;
@@ -11,4 +19,10 @@
 .favorite__restaurant .restaurant-name a {
   text-decoration: none;
   color: black;
+}
+
+@media screen and (min-width: 760px) {
+  .favorite__restaurant .no-favorite {
+    font-size: 16px;
+  }
 }
