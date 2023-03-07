@@ -1,8 +1,6 @@
-import data from '../../../DATA.json';
+import { hitFoods } from '../../data/DATA.json';
 import { createRestaurantCards, createHitsFood } from '../templates/template-creator';
 import RestaurantData from '../../data/restaurant-data';
-
-const { hitFoods } = data;
 
 const Home = {
   async render() {
