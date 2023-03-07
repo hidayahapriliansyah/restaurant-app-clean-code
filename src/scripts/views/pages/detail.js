@@ -13,9 +13,7 @@ import {
 const Detail = {
   async render() {
     return `
-    <div class="loader-container">
-      <span class="loader"></span>
-    </div>
+    <loader-content></loader-content>
     <div class="detail__container">
       <div class="img-detail__info">
         <div class="img-rating">
@@ -109,8 +107,8 @@ const Detail = {
         reviewsContainer,
       });
 
-      const loaderContainer = document.querySelector('.loader-container');
-      loaderContainer.remove();
+      const loaderContent = document.querySelector('loader-content');
+      loaderContent.remove();
     } catch (error) {
       if (error.message === 'Failed to fetch') {
         error.message += ': Terjadi masalah koneksi internet';

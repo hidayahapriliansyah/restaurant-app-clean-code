@@ -1,6 +1,8 @@
 import App from './views/app';
 import swRegister from './utils/sw-register';
 
+import './components/loader-content';
+
 import '../styles/content.css';
 import '../styles/main.css';
 import '../styles/navbar.css';

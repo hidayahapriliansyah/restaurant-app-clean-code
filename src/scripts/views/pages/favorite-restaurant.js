@@ -4,9 +4,7 @@ import { createRestaurantCards } from '../templates/template-creator';
 const FavoriteRestaurant = {
   async render() {
     return `
-      <div class="loader-container">
-        <span class="loader"></span>
-      </div>
+      <loader-content></loader-content>
       <section class="favorite__restaurant">
         <h2>Favorite Restaurant</h2>
         <div class="card-group">
@@ -24,8 +22,8 @@ const FavoriteRestaurant = {
       favoriteCardGroup.innerHTML += createRestaurantCards(restaurant);
     });
 
-    const loaderContainer = document.querySelector('.loader-container');
-    loaderContainer.remove();
+    const loaderContent = document.querySelector('loader-content');
+    loaderContent.remove();
   },
 };
 

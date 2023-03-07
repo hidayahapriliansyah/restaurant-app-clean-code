@@ -7,9 +7,7 @@ const { hitFoods } = data;
 const Home = {
   async render() {
     return `
-      <div class="loader-container">
-        <span class="loader"></span>
-      </div>
+      <loader-content></loader-content>
       <section class="hero">
         <img src="./images/heros/hero-image_2.jpg"  alt="Kegiatan makan bersama" class="img-hero">
         <div class="hero-tagline">
@@ -47,8 +45,8 @@ const Home = {
         hitsFoodCarGroupContainer.innerHTML += createHitsFood(food);
       });
 
-      const loaderContainer = document.querySelector('.loader-container');
-      loaderContainer.remove();
+      const loaderContent = document.querySelector('loader-content');
+      loaderContent.remove();
     } catch (error) {
       if (error.message === 'Failed to fetch') {
         error.message += ': Terjadi masalah koneksi internet';
