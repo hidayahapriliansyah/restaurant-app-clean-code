@@ -35,19 +35,27 @@ const Home = {
   },
 
   async afterRender() {
-    const restaurants = await RestaurantData.listAll();
-    const restaurantCardGroupContainer = document.querySelector('.explore .card-group');
-    restaurants.forEach((restaurant) => {
-      restaurantCardGroupContainer.innerHTML += createRestaurantCards(restaurant);
-    });
+    try {
+      const restaurants = await RestaurantData.listAll();
+      const restaurantCardGroupContainer = document.querySelector('.explore .card-group');
+      restaurants.forEach((restaurant) => {
+        restaurantCardGroupContainer.innerHTML += createRestaurantCards(restaurant);
+      });
 
-    const hitsFoodCarGroupContainer = document.querySelector('.hits .card-group');
-    hitFoods.forEach((food) => {
-      hitsFoodCarGroupContainer.innerHTML += createHitsFood(food);
-    });
+      const hitsFoodCarGroupContainer = document.querySelector('.hits .card-group');
+      hitFoods.forEach((food) => {
+        hitsFoodCarGroupContainer.innerHTML += createHitsFood(food);
+      });
 
-    const loaderContainer = document.querySelector('.loader-container');
-    loaderContainer.remove();
+      const loaderContainer = document.querySelector('.loader-container');
+      loaderContainer.remove();
+    } catch (error) {
+      if (error.message === 'Failed to fetch') {
+        error.message += ': Terjadi masalah koneksi internet';
+      }
+      // eslint-disable-next-line no-alert
+      alert(error.message);
+    }
   },
 };
 

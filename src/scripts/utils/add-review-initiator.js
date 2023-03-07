@@ -55,21 +55,27 @@ const AddReviewInitiator = {
       };
 
       btnSubmit.innerHTML = '<div class="button-loader-container"><span class="button-loader"></span><div>';
-      const reviews = await fetch(`${CONFIG.BASE_URL}review`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
-      });
-
-      console.log(reviews);
-      await this._renderReviewList();
-      nameInput.value = '';
-      reviewInput.value = '';
-      // eslint-disable-next-line no-alert
-      alert(`Review dari ${name} telah ditambahkan!`);
-      btnSubmit.innerHTML = 'Kirim!';
+      try {
+        await fetch(`${CONFIG.BASE_URL}review`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payload),
+        });
+        await this._renderReviewList();
+        nameInput.value = '';
+        reviewInput.value = '';
+        // eslint-disable-next-line no-alert
+        alert(`Review dari ${name} telah ditambahkan!`);
+        btnSubmit.innerHTML = 'Kirim!';
+      } catch (error) {
+        if (error.message === 'Failed to fetch') {
+          error.message += ': Terjadi masalah koneksi internet';
+        }
+        // eslint-disable-next-line no-alert
+        alert(error.message);
+      }
     });
   },
 

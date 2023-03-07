@@ -8,9 +8,16 @@ class RestaurantData {
   }
 
   static async detailRestaurant(id) {
-    const response = await fetch(API_ENDPOINT.DETAIL(id));
-    const responseJson = await response.json();
-    return responseJson.restaurant;
+    try {
+      const response = await fetch(API_ENDPOINT.DETAIL(id));
+      const responseJson = await response.json();
+      if (responseJson.message === 'Restaurant not found') {
+        throw new Error('ID restoran tidak valid');
+      }
+      return responseJson.restaurant;
+    } catch (error) {
+      return error;
+    }
   }
 }
 

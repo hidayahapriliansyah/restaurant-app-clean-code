@@ -21,21 +21,32 @@ const Reviews = {
   },
 
   async afterRender() {
-    const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const restaurant = await RestaurantData.detailRestaurant(url.id);
-    const { customerReviews: reviews } = restaurant;
+    try {
+      const url = UrlParser.parseActiveUrlWithoutCombiner();
+      const restaurant = await RestaurantData.detailRestaurant(url.id);
+      if (restaurant instanceof Error) {
+        throw restaurant;
+      }
+      const { customerReviews: reviews } = restaurant;
 
-    const restaurantName = document.querySelector('.reviews__container h2 span');
-    restaurantName.innerHTML = restaurant.name;
+      const restaurantName = document.querySelector('.reviews__container h2 span');
+      restaurantName.innerHTML = restaurant.name;
 
-    const imgRating = document.querySelector('.img-rating');
-    imgRating.innerHTML = createDetailImgRating(restaurant);
+      const imgRating = document.querySelector('.img-rating');
+      imgRating.innerHTML = createDetailImgRating(restaurant);
 
-    const reviewsContainerCard = document.querySelector('.reviews__container-card');
-    reviewsContainerCard.innerHTML = createReviewContentCard(reviews.reverse(), 'all');
+      const reviewsContainerCard = document.querySelector('.reviews__container-card');
+      reviewsContainerCard.innerHTML = createReviewContentCard(reviews.reverse(), 'all');
 
-    const loaderContainer = document.querySelector('.loader-container');
-    loaderContainer.remove();
+      const loaderContainer = document.querySelector('.loader-container');
+      loaderContainer.remove();
+    } catch (error) {
+      if (error.message === 'Failed to fetch') {
+        error.message += ': Terjadi masalah koneksi internet';
+      }
+      // eslint-disable-next-line no-alert
+      alert(error.message);
+    }
   },
 };
 
