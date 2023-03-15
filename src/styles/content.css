@@ -146,13 +146,13 @@
   color: var(--red-primary);
 }
 
-.card:hover .detail {
+/* .card:hover .detail {
   height: fit-content;
 }
 
 .card:hover .detail .description {
   white-space: normal;
-}
+} */
 
 .explore .card a {
   display: flex;

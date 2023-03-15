@@ -1,5 +1,8 @@
-import { hitFoods } from '../../data/DATA.json';
-import { createRestaurantCards, createHitsFood } from '../templates/template-creator';
+// import { hitFoods } from '../../data/DATA.json';
+import {
+  createRestaurantCards,
+  // createHitsFood
+} from '../templates/template-creator';
 import RestaurantData from '../../data/restaurant-data';
 
 const Home = {
@@ -38,10 +41,11 @@ const Home = {
         restaurantCardGroupContainer.innerHTML += createRestaurantCards(restaurant);
       });
 
-      const hitsFoodCarGroupContainer = document.querySelector('.hits .card-group');
-      hitFoods.forEach((food) => {
-        hitsFoodCarGroupContainer.innerHTML += createHitsFood(food);
-      });
+      // TODO nanti aktifkan ya sayang
+      // const hitsFoodCarGroupContainer = document.querySelector('.hits .card-group');
+      // hitFoods.forEach((food) => {
+      //   hitsFoodCarGroupContainer.innerHTML += createHitsFood(food);
+      // });
 
       const loaderContent = document.querySelector('loader-content');
       loaderContent.remove();
