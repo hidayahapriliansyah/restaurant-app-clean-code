@@ -97,7 +97,7 @@ const createFavoriteButtonTemplate = () => `
 `;
 
 const createFavoritedButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="favorite-button" class="like">
+  <button aria-label="Hapus dari favorit restaurant" id="favorite-button" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;
