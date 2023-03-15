@@ -4,8 +4,8 @@ const excerpDescription = (description) => (
 
 const createRestaurantCards = (restaurant) => `
   <div id="${restaurant.id}" class="card">
-    <img src="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" alt="${restaurant.name}">
-    <div class="city"><h4>${restaurant.city}</h4></div>
+    <img data-src="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}" src="images/placeholder.jpg" alt="${restaurant.name}" class="lazyload">
+    <div class="city"><span>${restaurant.city}</span></div>
     <div class="detail">
       <p class="rating">Rating : ${restaurant.rating}</p>
         <h3 class="restaurant-name">
@@ -20,7 +20,7 @@ const createRestaurantCards = (restaurant) => `
 const createHitsFood = (food) => `
   <div id="${food.id}" class="card-hits">
   <a href="#" id="" class="card-hits">
-    <img src="${food.picture}" alt="${food.name}">
+    <img data-src="http://source.unsplash.com/250x250?${food.keyword}" alt="${food.name}" src="images/placeholder.jpg" class="lazyload">
     <div class="detail">
       <h3 class="restaurant-name">${food.name}</h3>
     </div>
@@ -30,7 +30,7 @@ const createHitsFood = (food) => `
 
 const createDetailImgRating = (restaurant) => `
   <div class="img-detail">
-  <img src="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" alt="dummy">
+  <img data-src="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}" alt="${restaurant.name}" width="257" height="257" src="images/placeholder.jpg" class="lazyload">
   </div>
   <span class="detail__rating">
     Rating <span clas="rating">${restaurant.rating}</span>

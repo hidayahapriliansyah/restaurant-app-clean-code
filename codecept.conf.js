@@ -13,6 +13,7 @@ exports.config = {
   helpers: {
     Puppeteer: {
       url: 'http://127.0.0.1:9000',
+      // url: 'http://127.0.0.1:8080',
       // url: 'https://botram-hidayah.vercel.app/',
       show: true,
       windowSize: 'y',

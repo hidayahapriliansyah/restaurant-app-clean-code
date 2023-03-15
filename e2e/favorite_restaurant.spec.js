@@ -69,6 +69,7 @@ Scenario('Remove A Restraurant from Favorite Restaurant', async ({ I }) => {
   const willBeRemovedRestaurantName = await I.grabTextFrom('.restaurant-name a');
   assert.strictEqual(favoritedRestaurant, willBeRemovedRestaurantName);
 
+  // kok jadi tiba tiba gak bisa click, tadi mah jalan deh
   I.click('.restaurant-name a');
   pause();
 
