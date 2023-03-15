@@ -9,6 +9,7 @@
 
 .img-hero {
   width: 100%;
+  height: fit-content;
   object-fit: cover;
 }
 
@@ -121,7 +122,7 @@
   border-bottom-right-radius: 5px;
 }
 
-.city h4 {
+.city span {
   margin-left: 10px;
 }
 

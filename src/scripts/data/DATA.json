@@ -77,22 +77,22 @@
     {
       "id": "1",
       "name": "Seblak Ceker Kuah Pedas",
-      "picture": "https://asset.kompas.com/crops/-wUWEAZcy5u7t4cawCVIhQ-2c_0=/0x1146:3376x3397/750x500/data/photo/2022/07/19/62d61e932fc4a.jpg"
+      "keyword": "seblak ceker"
     },
     {
       "id": "2",
       "name": "Bakso Mercon",
-      "picture": "https://i0.wp.com/resepkoki.id/wp-content/uploads/2020/10/Resep-Bakso-Mercon.jpg?fit=1079%2C1207&ssl=1"
+      "keyword": "bakso pedas"
     },
     {
       "id": "3",
       "name": "Pempek Kapal Selam",
-      "picture": "https://o-cdn-cas.sirclocdn.com/parenting/images/827abeff0932d279ca199a3668bec851.width-1000.jpg"
+      "keyword": "batagor"
     },
     {
       "id": "4",
       "name": "Ayam Geprek",
-      "picture": "https://www.unileverfoodsolutions.co.id/dam/global-ufs/mcos/SEA/calcmenu/recipes/ID-recipes/chicken-&-other-poultry-dishes/chicken-geprek-(smashed)/main-header.jpg"
+      "keyword": "ayam geprek"
     }
   ]
 }

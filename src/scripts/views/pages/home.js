@@ -1,5 +1,8 @@
-import { hitFoods } from '../../data/DATA.json';
-import { createRestaurantCards, createHitsFood } from '../templates/template-creator';
+import data from '../../data/DATA.json';
+import {
+  createRestaurantCards,
+  createHitsFood,
+} from '../templates/template-creator';
 import RestaurantData from '../../data/restaurant-data';
 
 const Home = {
@@ -7,7 +10,10 @@ const Home = {
     return `
       <loader-content></loader-content>
       <section class="hero">
-        <img src="./images/heros/hero-image_2.jpg"  alt="Kegiatan makan bersama" class="img-hero">
+      <picture>
+        <source media="(max-width: 600px)" srcset="./images/heros/hero-image_2-small.jpg">
+        <img src="./images/heros/hero-image_2-large.jpg"  alt="Kegiatan makan bersama" class="img-hero" width="786" height="500">
+      </picture>
         <div class="hero-tagline">
           <div class="tagline">
             <h1>Botram</h1>
@@ -38,8 +44,9 @@ const Home = {
         restaurantCardGroupContainer.innerHTML += createRestaurantCards(restaurant);
       });
 
+      // TODO nanti aktifkan ya sayang
       const hitsFoodCarGroupContainer = document.querySelector('.hits .card-group');
-      hitFoods.forEach((food) => {
+      data.hitFoods.forEach((food) => {
         hitsFoodCarGroupContainer.innerHTML += createHitsFood(food);
       });
 
