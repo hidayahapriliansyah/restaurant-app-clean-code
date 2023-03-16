@@ -67,7 +67,10 @@
 
 .card {
   position: relative;
+  min-width: 243px;
+  min-height: 243px;
   max-width: 350px;
+  max-height: 350px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -185,6 +188,7 @@
 
 .hits .card-group {
   width: 100%;
+  min-height: 170px;
   justify-items: center;
   gap: 10px;
 }
