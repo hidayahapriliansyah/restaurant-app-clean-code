@@ -34,6 +34,7 @@
 .reviews__add #review-name {
   min-width: 100%;
   max-width: 300px;
+  height: 45px;
   margin: 5px 0;
   padding: 10px;
   

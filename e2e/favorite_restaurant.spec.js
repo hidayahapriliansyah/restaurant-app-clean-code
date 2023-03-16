@@ -20,7 +20,7 @@ const addFavoriteRestaurant = async ({ I }) => {
    * Silakan dicoba ya, kak. Mohon banget masukkannya.
    * Oh, ya maaf, pas testing e2e nya harus banyak I.exit hehehe
    */
-  pause();
+  I.wait(5);
 
   I.waitForElement('.restaurant-name a', 5);
   I.seeElement('.restaurant-name a');
@@ -30,7 +30,7 @@ const addFavoriteRestaurant = async ({ I }) => {
 
   I.click(firstRestaurant);
   // nah pause ini buat ngecek apakah udah masuk halaman detail apa belum
-  pause();
+  I.wait(5);
 
   I.seeElement('#favorite-button');
   I.click('#favorite-button');
@@ -62,7 +62,7 @@ Scenario('Remove A Restraurant from Favorite Restaurant', async ({ I }) => {
   const favoritedRestaurant = await addFavoriteRestaurant({ I });
 
   I.amOnPage('#/favorite-restaurant');
-  pause();
+  I.wait(5);
 
   I.waitForElement('.restaurant-name a', 5);
   I.seeElement('.restaurant-name a');
@@ -72,6 +72,7 @@ Scenario('Remove A Restraurant from Favorite Restaurant', async ({ I }) => {
   // kok jadi tiba tiba gak bisa click, tadi mah jalan deh
   I.click('.restaurant-name a');
   pause();
+  I.wait(5);
 
   I.seeElement('#favorite-button');
   I.click('#favorite-button');

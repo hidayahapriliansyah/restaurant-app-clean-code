@@ -17,8 +17,22 @@
 }
 
 .favorite__restaurant .restaurant-name a {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  min-width: 45px;
+  min-height: 45px;
+  font-size: 16px;
+  margin-bottom: -10px;
   text-decoration: none;
   color: black;
+}
+
+.favorite__restaurant .card .description a {
+  min-width: 45px;
+  min-height: 45px;
+  display: inline-flex;
+  padding: 5px;
 }
 
 @media screen and (min-width: 760px) {

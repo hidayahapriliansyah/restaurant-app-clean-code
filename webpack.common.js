@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
@@ -52,6 +53,7 @@ module.exports = {
         },
       },
     },
+    minimize: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -81,5 +83,6 @@ module.exports = {
         }),
       ],
     }),
+    new BundleAnalyzerPlugin(),
   ],
 };
